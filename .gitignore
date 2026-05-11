@@ -1,0 +1,36 @@
+# ==========================================
+# Java / Maven
+# ==========================================
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+
+# ==========================================
+# VSCode
+# ==========================================
+.vscode/
+*.code-workspace
+
+# ==========================================
+# Windows 11
+# ==========================================
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ==========================================
+# Banco de dados / Configurações sensíveis
+# ==========================================
+src/main/resources/database.properties
+src/main/resources/config.properties
+
+# ==========================================
+# Logs e exports gerados pela aplicação
+# ==========================================
+*.csv
+log.txt
+logs/
