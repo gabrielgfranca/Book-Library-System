@@ -15,6 +15,11 @@ target/
 *.code-workspace
 
 # ==========================================
+# IntelliJ IDEA
+# ==========================================
+.idea
+
+# ==========================================
 # Windows 11
 # ==========================================
 Thumbs.db
@@ -34,3 +39,10 @@ src/main/resources/config.properties
 *.csv
 log.txt
 logs/
+
+# ==========================================
+# Project specific
+# ==========================================
+src/main/resources/application.properties
+SDD_Biblioteca_de_Livros.pdf
+SDD_Biblioteca_de_Livros.md
