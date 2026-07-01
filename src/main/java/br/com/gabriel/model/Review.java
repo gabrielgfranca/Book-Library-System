@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 public class Review {
     private Integer id;
     private Integer bookId;
-    private Double note;
+    private Double rating;
     private String comment;
     private LocalDateTime date;
 
@@ -17,8 +17,8 @@ public class Review {
         return bookId;
     }
 
-    public Double getNote() {
-        return note;
+    public Double getRating() {
+        return rating;
     }
 
     public String getComment() {
@@ -33,8 +33,8 @@ public class Review {
         this.bookId = bookId;
     }
 
-    public void setNote(Double note) {
-        this.note = note;
+    public void setRating(Double rating) {
+        this.rating = rating;
     }
 
     public void setComment(String comment) {
