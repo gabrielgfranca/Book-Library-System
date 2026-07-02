@@ -30,7 +30,7 @@ $RECYCLE.BIN/
 # ==========================================
 # Banco de dados / Configurações sensíveis
 # ==========================================
-src/main/resources/database.properties
+src/main/resources/db.properties
 src/main/resources/config.properties
 
 # ==========================================
