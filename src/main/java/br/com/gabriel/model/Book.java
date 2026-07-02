@@ -10,6 +10,20 @@ public class Book {
     private String synopsis;
     private Boolean read;
 
+    public Book() {
+    }
+
+    public Book(Integer id, Integer year, String title, String author, String genre, String isbn, String synopsis, Boolean read) {
+        this.id = id;
+        this.year = year;
+        this.title = title;
+        this.author = author;
+        this.genre = genre;
+        this.isbn = isbn;
+        this.synopsis = synopsis;
+        this.read = read;
+    }
+
     public Integer getId() {
         return id;
     }

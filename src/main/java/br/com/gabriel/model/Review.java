@@ -9,6 +9,17 @@ public class Review {
     private String comment;
     private LocalDateTime date;
 
+    public Review() {
+    }
+
+    public Review(Integer id, Integer bookId, Double rating, String comment, LocalDateTime date) {
+        this.id = id;
+        this.bookId = bookId;
+        this.rating = rating;
+        this.comment = comment;
+        this.date = date;
+    }
+
     public Integer getId() {
         return id;
     }

@@ -2,10 +2,16 @@ package br.com.gabriel.dao;
 
 import br.com.gabriel.model.Book;
 
+import java.sql.Connection;
 import java.util.List;
 import java.util.Optional;
 
 public class BookDAO {
+    private Connection connection;
+
+    public BookDAO(Connection connection) {
+        this.connection = connection;
+    }
 
     void insert(Book book) {
 
