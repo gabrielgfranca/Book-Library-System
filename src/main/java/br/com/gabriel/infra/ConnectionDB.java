@@ -1,5 +1,6 @@
 package br.com.gabriel.infra;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 import java.sql.Connection;
@@ -7,29 +8,27 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConnectionDB {
+    private final Properties properties = new Properties();
 
-    private static Connection connection;
+    public ConnectionDB() {
+        try (InputStream file = getClass().getClassLoader().getResourceAsStream("db.properties")) {
 
-    public static Connection getConnection() throws SQLException {
-        if (connection == null) {
-            try {
-                Properties properties = new Properties();
-                InputStream file = ConnectionDB.class
-                        .getClassLoader()
-                        .getResourceAsStream("application.properties");
-
-                properties.load(file);
-
-                String url = properties.getProperty("db.url");
-                String user = properties.getProperty("db.user");
-                String password = properties.getProperty("db.password");
-
-                connection = DriverManager.getConnection(url, user, password);
-            } catch (Exception e) {
-                throw new RuntimeException("Error connecting to the database: " + e.getMessage());
+            if (file == null) {
+                throw new RuntimeException("applications.properties not found.");
             }
-        }
 
-        return connection;
+            properties.load(file);
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public Connection getConnection() throws SQLException {
+        return DriverManager.getConnection(
+                properties.getProperty("db.url"),
+                properties.getProperty("db.user"),
+                properties.getProperty("db.password")
+        );
     }
 }
