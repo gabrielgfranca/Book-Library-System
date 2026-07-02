@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class BookDAO {
-    private Connection connection;
+    private final Connection connection;
 
     public BookDAO(Connection connection) {
         this.connection = connection;

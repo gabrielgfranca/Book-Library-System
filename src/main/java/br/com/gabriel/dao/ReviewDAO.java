@@ -6,7 +6,7 @@ import java.sql.Connection;
 import java.util.List;
 
 public class ReviewDAO {
-    private Connection connection;
+    private final Connection connection;
 
     public ReviewDAO(Connection connection) {
         this.connection = connection;
