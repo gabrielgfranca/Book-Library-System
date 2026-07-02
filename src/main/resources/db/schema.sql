@@ -12,7 +12,7 @@ CREATE TABLE books (
     isbn CHAR(13) UNIQUE,
     is_read BOOLEAN NOT NULL DEFAULT FALSE,
     synopsis TEXT,
-    FOREIGN KEY (genre_id) REFERENCES genres(id) ON DELETE SET RESTRICT
+    FOREIGN KEY (genre_id) REFERENCES genres(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE reviews (
