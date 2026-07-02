@@ -52,7 +52,7 @@ public class Book {
         return synopsis;
     }
 
-    public Boolean getRead() {
+    public Boolean isRead() {
         return read;
     }
 
